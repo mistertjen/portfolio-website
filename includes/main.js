@@ -24,7 +24,7 @@
 				githubRepos = JSON.parse(githubRepos.responseText);
 				for (var i = 0, repos = {}; i < githubRepos.length; i++) {
 					// in the future update conditions.
-					if (githubRepos[i]['size'] > 1000) {
+					if (githubRepos[i]['size'] > 1000 || githubRepos[i]['name'] == 'portfolio-website' || githubRepos[i]['name'] == 'photography-website' ) {
 						// OBJECT WHERE KEYS ARE THE REPO NAMES
 						repos[githubRepos[i]['name']] = githubRepos[i];
 					};
@@ -38,6 +38,11 @@
 					document.getElementsByClassName('showcase-lastest-push')[counter].innerHTML = 'Lastest push on: ' +	String(new Date(repos[keys]['pushed_at'])).slice(4,15);
 					document.getElementsByClassName('showcase-project-languages')[counter].innerHTML = 'Languages: ' + repos[keys]['language'];
 					document.getElementsByClassName('ajax-show')[counter].style.display = "block";
+
+					if (repos[keys]['name'] == 'photography-website') {
+						document.getElementsByClassName("showcase-project-img")[counter].src = './img/project-photography.png';
+					}
+					counter++;
 				}				
 				// fix authentication.
 				// html template.

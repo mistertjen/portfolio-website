@@ -67,25 +67,6 @@ footer {
 	padding:40px;
 }
 
-/*TO BE DELETED*/
-img {
-	max-width: 100%;
-}
-
-.img-showcase {
-	max-width: 600px;
-}
-
-.github-embed img {
-	margin:0px auto;
-}
-
-.img-home, .gist-home {
-	max-width:800px;
-	text-align:center;
-	margin:0px auto;
-}
-
 /*=GENERAL POSITIONING*/
 .content-container {
 	max-width:1080px;
@@ -110,9 +91,9 @@ img {
 }
 
 /*=SHOWCASE-PAGE*/
-.showcase-slider {
+.project-container {
 	max-width: 60%;
-	margin:0px auto;
+	margin:20px auto 70px;
 }
 
 .showcase-box img {
@@ -169,6 +150,11 @@ img {
 	nav ul li:after, nav ul li:first-child:before {
 		padding: 0px 20px;
 	}
+
+	.project-container {
+		max-width: 94%;
+		margin:40px auto 0px;
+	}
 }
 
 @media (max-width: 405px) {
@@ -176,6 +162,7 @@ img {
 		padding: 0px 5px;
 	}
 	.showcase-box img {
-	height: inherit;
-	max-width:60%;
+		height: inherit;
+		max-width:60%;
+	}
 }
